@@ -1,0 +1,21 @@
+@import 'vars'
+
+highlight()
+  &:hover,
+  &:focus,
+  &:active
+    {block}
+
+breakpoint($size)
+  if($size == 'xs')
+    @media screen and (min-width 0)
+      {block}
+  if($size == 'sm')
+    @media screen and (min-width 768px)
+      {block}
+  else if ($size == 'md')
+    @media screen and (min-width 992px)
+      {block}
+  else if ($size == 'lg')
+    @media screen and (min-width 1200px)
+      {block}

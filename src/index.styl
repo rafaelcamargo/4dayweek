@@ -1,0 +1,71 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+@import 'vars'
+@import 'mixins'
+
+html,
+body
+  margin 0
+  background-color $color-darkest
+  color $color-grey-lighter
+  font-size 16px
+  font-family $font-family-primary
+  font-weight 300
+
+h1, h2, h3, h4, h5, h6
+  margin 0
+  font-weight 400
+
+h1
+  font-size $font-size-xxl
+  letter-spacing -1px
+
+h2
+  font-size $font-size-xl
+
+h3
+  font-size $font-size-md
+
+p
+  margin 0
+  line-height 1.5
+
+h3 + p,
+p + h3,
+p ~ p
+  margin-top 20px
+
+a
+  display inline-block
+  color $color-purple
+  text-decoration none
+
+ul
+  margin 0
+  padding 0
+  list-style-type none
+
+blockquote
+  margin 0
+
+input, textarea
+  padding 10px 15px
+  width 100%
+  font-size $font-size-sm
+  border 1px solid $color-grey
+  border-radius 4px
+  box-sizing border-box
+  +highlight()
+    border 1px solid $color-purple
+    outline 0
+
+label
+  color $color-grey-dark
+  font-size $font-size-xxxs
+  font-weight 600
+  text-transform uppercase
+
+em
+  display inline
+  padding 0 2px
+  font-family $font-family-secondary

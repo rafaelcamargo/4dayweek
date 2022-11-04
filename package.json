@@ -1,0 +1,42 @@
+{
+  "name": "4dayweek",
+  "version": "0.1.0",
+  "description": "A list of companies friendly to 4 day workweek",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "format": "eslint ./src/**/*.js",
+    "start": "webpack-dev-server",
+    "test": "jest"
+  },
+  "author": "Rafael Camargo <hello@rafaelcamargo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "babel-jest": "^27.4.5",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.3.1",
+    "eslint": "^8.5.0",
+    "eslint-plugin-react": "^7.28.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.5",
+    "mini-css-extract-plugin": "^2.4.5",
+    "stylus": "^0.56.0",
+    "stylus-loader": "^6.2.0",
+    "terser-webpack-plugin": "^5.3.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-merge": "^5.8.0"
+  }
+}

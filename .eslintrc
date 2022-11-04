@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "no-console": 0,
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "complexity": ["error", { "max": 3 }],
+    "max-lines": ["error", { "max": 100 }],
+    "max-statements": ["error", { "max": 5 }, { "ignoreTopLevelFunctions": true }],
+    "react/prop-types": 0
+  },
+  "overrides": [
+    {
+      "files": [ "src/**/*.test.js" ],
+      "rules": {
+        "max-lines": ["error", { "max": 250 }],
+        "max-statements": ["error", { "max": 15 },
+          { "ignoreTopLevelFunctions": true }
+        ]
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

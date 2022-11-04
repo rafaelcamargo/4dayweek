@@ -1,0 +1,96 @@
+version: 2.1
+
+orbs:
+  coveralls: coveralls/coveralls@1.0.6
+
+defaults: &defaults
+  docker:
+    - image: cimg/node:16.13.1-browsers
+  working_directory: ~/app
+
+jobs:
+  install:
+    <<: *defaults
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: Install
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: "."
+          paths:
+            - "package.json"
+            - "package-lock.json"
+            - "project.json"
+            - "jest.*.js"
+            - "webpack.*.js"
+            - ".babelrc"
+            - ".eslintrc"
+            - ".firebaserc"
+            - "firebase.json"
+            - "node_modules"
+            - ".git/*"
+            - ".circleci/*"
+            - "src/*"
+
+  format:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run:
+          name: Format
+          command: npm run format
+
+  build:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run:
+          name: Build
+          command: NODE_ENV=production npm run build
+      - persist_to_workspace:
+          root: "."
+          paths:
+            - "dist/*"
+
+  test:
+    <<: *defaults
+
+    steps:
+      - attach_workspace:
+          at: ~/app
+      - run:
+          name: Test
+          command: npm run test -- --maxWorkers=2 --coverage --coverageReporters=lcov
+      - coveralls/upload:
+          verbose: true
+
+workflows:
+  version: 2
+
+  branch-workflow:
+    jobs:
+      - install
+      - format:
+          requires:
+            - install
+      - build:
+          requires:
+            - install
+      - test:
+          requires:
+            - install
