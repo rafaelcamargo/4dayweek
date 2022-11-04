@@ -7,13 +7,14 @@ html,
 body
   margin 0
   background-color $color-darkest
-  color $color-grey-lighter
+  color $color-grey-dark
   font-size 16px
   font-family $font-family-primary
   font-weight 300
 
 h1, h2, h3, h4, h5, h6
   margin 0
+  color $color-lightest
   font-weight 400
 
 h1
@@ -33,7 +34,8 @@ p
 h3 + p,
 p + h3,
 p ~ p
-  margin-top 20px
+p ~ figure
+  margin-top 40px
 
 a
   display inline-block
@@ -69,3 +71,6 @@ em
   display inline
   padding 0 2px
   font-family $font-family-secondary
+
+figure
+  margin 0
