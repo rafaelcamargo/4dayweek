@@ -1,6 +1,9 @@
 # 4 day week
 > A list of companies friendly to 4 day workweek
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/rafaelcamargo/4dayweek/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/rafaelcamargo/4dayweek/tree/main)
+[![Coverage Status](https://coveralls.io/repos/github/rafaelcamargo/4dayweek/badge.svg?branch=main)](https://coveralls.io/github/rafaelcamargo/4dayweek?branch=main)
+
 ## Contributing
 
 1. Install [Node](https://nodejs.org/en/). Download the "Recommend for Most Users" version.
