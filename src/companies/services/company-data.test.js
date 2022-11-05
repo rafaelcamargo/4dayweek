@@ -15,7 +15,8 @@ describe('Company Data Service', () => {
   });
 
   it('should gather all company data in a single json', () => {
-    companyDataService.concat();
+    const onSuccess = jest.fn();
+    companyDataService.concat(onSuccess);
     expect(logger.msg).toHaveBeenCalledWith('Found 3 companies');
     expect(fileService.fileSystem.writeFile).toHaveBeenCalledWith(
       path.join(__dirname, '../../../dist/data/companies.json'),
@@ -23,6 +24,7 @@ describe('Company Data Service', () => {
       expect.any(Function)
     );
     expect(logger.msg).toHaveBeenCalledWith('Successfully built data for 3 companies', { theme: 'success' });
+    expect(onSuccess).toHaveBeenCalled();
   });
 
   function mockFileSystem(){

@@ -4,9 +4,10 @@
   "description": "A list of companies friendly to 4 day workweek",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && webpack && node ./scripts/concat-company-data",
     "format": "eslint ./src/**/*.js",
-    "start": "webpack-dev-server",
+    "start": "npm run clean && node ./scripts/serve",
     "test": "jest"
   },
   "author": "Rafael Camargo <hello@rafaelcamargo.com>",
@@ -26,6 +27,7 @@
     "@testing-library/react": "^12.1.2",
     "babel-jest": "^27.4.5",
     "babel-loader": "^8.2.3",
+    "chokidar": "^3.5.3",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.3.1",
     "eslint": "^8.5.0",
@@ -34,6 +36,7 @@
     "glob": "^8.0.3",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.5",
+    "live-server": "^1.2.2",
     "mini-css-extract-plugin": "^2.4.5",
     "stylus": "^0.56.0",
     "stylus-loader": "^6.2.0",
