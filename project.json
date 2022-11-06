@@ -5,7 +5,7 @@
       "file": "src/index.html"
     },
     "favicon": {
-      "file": "src/base/images/favicon_32x32.png"
+      "files": "src/base/images/favicon-*.png"
     },
     "scripts": {
       "index": "src/index.js"
@@ -32,6 +32,7 @@
       }
     },
     "images": {
+      "directory": "dist/assets/images",
       "filename": {
         "production": "assets/images/[name]-[contenthash][ext]",
         "development": "assets/images/[name][ext]"

@@ -1,5 +1,7 @@
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 const project = require('./project.json');
 const env = process.env.NODE_ENV || 'development';
 
@@ -15,6 +17,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
       },
       {
         test: /\.styl$/,
@@ -35,11 +41,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: project.source.index.file,
-      favicon: project.source.favicon.file,
       minify: { collapseWhitespace: true }
     }),
     new MiniCssExtractPlugin({
       filename: project.dist.styles.filename[env]
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, project.source.favicon.files),
+          to: `${path.join(__dirname, project.dist.images.directory)}/[name][ext]`
+        }
+      ],
     })
   ]
 }
