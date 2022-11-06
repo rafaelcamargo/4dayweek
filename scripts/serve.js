@@ -62,7 +62,7 @@ function serve(){
     logLevel: 0
   });
   logger.msg(
-    `Website successfully served at http://${host}:${port}`,
+    `Website successfully served at http://localhost:${port}`,
     { theme: 'success' }
   );
 }
