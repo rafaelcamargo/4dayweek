@@ -8,7 +8,8 @@
     "build": "npm run clean && node ./scripts/concat-company-data && webpack",
     "format": "eslint ./src/**/*.js",
     "start": "npm run clean && node ./scripts/serve",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "firebase deploy --non-interactive"
   },
   "author": "Rafael Camargo <hello@rafaelcamargo.com>",
   "license": "MIT",
@@ -34,6 +35,7 @@
     "eslint": "^8.5.0",
     "eslint-plugin-react": "^7.28.0",
     "file-system": "^2.2.2",
+    "firebase-tools": "^11.16.0",
     "glob": "^8.0.3",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.5",
