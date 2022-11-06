@@ -1,0 +1,24 @@
+@import '@src/mixins'
+@import '@src/vars'
+
+.fwd-company-list
+  li:not(:first-child)
+    border-top 1px solid $color-grey-darker
+
+.fwd-company-list-item-detail-summary
+  padding 20px 5px
+  list-style none
+
+.fwd-company-list-item-detail-content
+  padding 5px 5px 20px
+  footer
+    margin-top 10px
+    a + a
+      margin-left 10px
+
++breakpoint('md')
+  .fwd-company-list-item-detail-summary
+    cursor pointer
+    transition background-color 300ms ease-out
+    &:hover
+      background-color alpha($color-grey-darker, .25)
