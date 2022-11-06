@@ -14,6 +14,7 @@
   "author": "Rafael Camargo <hello@rafaelcamargo.com>",
   "license": "MIT",
   "dependencies": {
+    "@glorious/analytics": "^0.3.0",
     "@glorious/taslonic": "^1.5.2",
     "axios": "^0.27.2",
     "react": "^17.0.2",
