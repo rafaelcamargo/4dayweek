@@ -41,6 +41,7 @@ jobs:
             - "node_modules"
             - ".git/*"
             - ".circleci/*"
+            - "environments/*"
             - "src/*"
             - "scripts/*"
 
