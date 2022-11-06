@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && webpack && node ./scripts/concat-company-data",
+    "build": "npm run clean && node ./scripts/concat-company-data && webpack",
     "format": "eslint ./src/**/*.js",
     "start": "npm run clean && node ./scripts/serve",
     "test": "jest"
@@ -39,6 +39,7 @@
     "jest": "^27.4.5",
     "live-server": "^1.2.2",
     "mini-css-extract-plugin": "^2.4.5",
+    "prerender-spa-plugin-next": "^4.2.3",
     "stylus": "^0.56.0",
     "stylus-loader": "^6.2.0",
     "terser-webpack-plugin": "^5.3.0",
