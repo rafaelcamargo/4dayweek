@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HomeView } from '@src/home/views/home';
+import { HomeView } from '@src/home/views/home-view';
 
 export const Router = () => {
   return (

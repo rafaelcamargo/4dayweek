@@ -1,4 +1,6 @@
+import './home-view.styl';
 import { View } from '@src/base/components/view/view';
+import { CompanyList } from '@src/companies/components/company-list/company-list';
 
 export const HomeView = () => {
   return (
@@ -7,8 +9,10 @@ export const HomeView = () => {
         <p>
           The idea behind this website is getting togheter all the companies
           that already work four days a week or that sympathize with shorter
-          working hours.
+          work weeks.
         </p>
+        <h2>Companies</h2>
+        <CompanyList />
       </View>
     </div>
   );

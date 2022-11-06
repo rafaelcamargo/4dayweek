@@ -13,7 +13,8 @@ module.exports = {
   },
   moduleNameMapper: {
     '@src\/(.*)$': `<rootDir>/${project.source.root}/$1`,
-    '@environment$': `<rootDir>/${project.source.environments.root}/development.js`
+    '@environment$': `<rootDir>/${project.source.environments.root}/development.js`,
+    '^.+\\.css$': `<rootDir>/${project.source.root}/base/mocks/raw-file.js`
   },
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: [
