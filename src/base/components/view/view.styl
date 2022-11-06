@@ -1,4 +1,28 @@
+@import '@src/vars'
+
+$footer-height = 80px
+
 .fdw-view
+  position relative
   margin 0 auto
+  padding-bottom $footer-height + 80px
   width 90%
+  min-height 100vh
   max-width 600px
+  box-sizing border-box
+
+.fdw-view-footer
+  display flex
+  align-items center
+  position absolute
+  bottom 0
+  left 0
+  width 100%
+  height $footer-height
+  color $color-grey-darker
+  font-size $font-size-xxs
+  font-weight bold
+  a
+    margin-left 4px
+    color $color-purple-dark
+    text-transform none
