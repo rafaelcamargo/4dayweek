@@ -23,19 +23,7 @@ cd 4dayweek
 npm install
 ```
 
-5. If you want to just build the project, run:
-``` bash
-npm run build
-```
-
-6. Otherwise, run:
-``` bash
-npm run start
-```
-
-The app will be running on `http://localhost:9000`.
-
-7. Create a `<company-name>.json` in `src/companies/data` containing the following data:
+5. Create a `<company-name>.json` in `src/companies/data` containing the following data:
 ``` javascript
 {
   "name": String,
@@ -57,6 +45,11 @@ The app will be running on `http://localhost:9000`.
   "updated_on": String
   // [Optional] Date you are updating the file.
 }
+```
+
+6. Check your changes running the command below and accessing `http://localhost:9000`:
+``` bash
+npm run start
 ```
 
 ## Tests
