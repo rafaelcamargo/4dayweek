@@ -1,3 +1,3 @@
 export const formatSrc = src => {
-  return src.replace(/http:\/\/.+\/assets\/\.\.\//, '/');
+  return src.replace(/https?:\/\/.+\/assets\/\.\.\//, '/');
 };
