@@ -1,12 +1,12 @@
-import { render } from '@src/base/services/testing';
+import { render, RouterMock } from '@src/base/services/testing';
 import { Link } from './link';
 
 describe('Link', () => {
   function mount({ content, ...rest }){
     return render(
-      <Link {...rest}>
-        {content}
-      </Link>
+      <RouterMock>
+        <Link {...rest}>{content}</Link>
+      </RouterMock>
     );
   }
 
@@ -25,5 +25,12 @@ describe('Link', () => {
     const { getByText } = mount({ content, href, external: true });
     expect(getByText(content)).toHaveAttribute('rel', 'noopener noreferrer nofollow');
     expect(getByText(content)).toHaveAttribute('target', '_blank');
+  });
+
+  it('should optionally render an internal link', () => {
+    const content = 'contribute';
+    const to = '/contribute';
+    const { getByText } = mount({ content, to });
+    expect(getByText(content)).toHaveAttribute('href', to);
   });
 });

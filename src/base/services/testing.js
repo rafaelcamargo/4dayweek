@@ -1,4 +1,5 @@
 import { act, render } from '@testing-library/react';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
 export * from '@testing-library/react';
 
 export async function pause(){
@@ -13,3 +14,13 @@ export async function asyncMount(component){
   });
   return result;
 }
+
+export const RouterMock = ({ children }) => {
+  return (
+    <MemoryRouter initialEntries={['/']}>
+      <Routes>
+        <Route path="/" element={children} />
+      </Routes>
+    </MemoryRouter>
+  );
+};
