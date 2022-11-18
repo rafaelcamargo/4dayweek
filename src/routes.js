@@ -6,5 +6,9 @@ module.exports = [
   {
     path: '/contribute',
     name: 'contribute'
+  },
+  {
+    path: '/feedback',
+    name: 'feedback'
   }
 ];

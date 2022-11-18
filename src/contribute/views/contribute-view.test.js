@@ -2,7 +2,7 @@ import ENV from '@environment';
 import { render, RouterMock } from '@src/base/services/testing';
 import { ContributeView } from './contribute-view';
 
-describe('Home View', () => {
+describe('Contribute View', () => {
   function mount(){
     return render(
       <RouterMock>

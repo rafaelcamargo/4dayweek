@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ContributeView } from '@src/contribute/views/contribute-view';
+import { FeedbackView } from '@src/feedback/views/feedback-view';
 import { HomeView } from '@src/home/views/home-view';
 import routes from '@src/routes';
 
@@ -19,6 +20,7 @@ export const Router = () => {
 function getViewComponentByViewName(viewName){
   return {
     'home': HomeView,
-    'contribute': ContributeView
+    'contribute': ContributeView,
+    'feedback': FeedbackView
   }[viewName];
 }
