@@ -33,16 +33,40 @@ npm run build
 npm run start
 ```
 
-The app will be running on `http://localhost:8080`.
+The app will be running on `http://localhost:9000`.
+
+7. Create a `<company-name>.json` in `src/companies/data` containing the following data:
+``` javascript
+{
+  "name": String,
+  // [Required] Company's name.
+  "adoption": String,
+  // [Required] "Full" or "Partial".
+  // Full: Company adopts 4-day week for everyone during the whole year.
+  // Partial: Company adopts 4-day week with restrictions (e.g. During summer only).
+  "website": String,
+  // [Required] Company's website.
+  "careers_page": String,
+  // [Required] Company's careers page.
+  "description": String,
+  // [Required] Brief description on how company applies 4-day week.
+  "origin": String,
+  // [Optional] City/Country where company has been founded (e.g. Chicago, USA).
+  "created_on": String,
+  // [Required] Date you you are creating the file.
+  "updated_on": String
+  // [Optional] Date you are updating the file.
+}
+```
 
 ## Tests
 
-1. Ensure that all the code you have added is covered with tests:
+1. In case you changed any website behavior, ensure that all the code you changed is covered with automated tests:
 ``` bash
 npm run test
 ```
 
-2. You can optionally generate a coverage report after running tests:
+2. You can optionally generate a coverage report while running tests:
 ``` bash
 npm run test -- --coverage
 ```
