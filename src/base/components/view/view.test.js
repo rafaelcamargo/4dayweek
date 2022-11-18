@@ -1,12 +1,14 @@
-import { render } from '@testing-library/react';
+import { render, RouterMock } from '@src/base/services/testing';
 import { View } from './view';
 
 describe('View', () => {
   function mount({ content, ...rest } = {}){
     return render(
-      <View {...rest}>
-        {content}
-      </View>
+      <RouterMock>
+        <View {...rest}>
+          {content}
+        </View>
+      </RouterMock>
     );
   }
 

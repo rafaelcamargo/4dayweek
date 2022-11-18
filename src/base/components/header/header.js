@@ -1,10 +1,14 @@
 import './header.styl';
 import { Logo } from '@src/base/components/logo/logo';
+import { Link } from '@src/base/components/link/link';
 
 export const Header = ({ heading }) => {
   return (
     <div className="fdw-header">
-      <Logo /> {buildHeading(heading)}
+      <Link to="/" aria-label="homepage">
+        <Logo />
+      </Link>
+      {buildHeading(heading)}
     </div>
   );
 };

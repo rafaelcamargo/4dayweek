@@ -1,10 +1,14 @@
 import ENV from '@environment';
-import { render } from '@src/base/services/testing';
+import { render, RouterMock } from '@src/base/services/testing';
 import { ContributeView } from './contribute-view';
 
 describe('Home View', () => {
   function mount(){
-    return render(<ContributeView />);
+    return render(
+      <RouterMock>
+        <ContributeView />
+      </RouterMock>
+    );
   }
 
   it('should contain logo and heading', () => {
