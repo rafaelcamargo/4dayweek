@@ -1,6 +1,10 @@
 module.exports = [
   {
     path: '/',
-    name: 'home',
+    name: 'home'
+  },
+  {
+    path: '/contribute',
+    name: 'contribute'
   }
 ];
