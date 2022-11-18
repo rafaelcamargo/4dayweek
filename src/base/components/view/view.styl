@@ -15,6 +15,7 @@ $footer-height = 100px
   display flex
   align-items center
   justify-content center
+  flex-direction column
   position absolute
   bottom 0
   left 0
@@ -22,8 +23,11 @@ $footer-height = 100px
   height $footer-height
   color $color-grey-dark
   font-size $font-size-xxs
-  font-weight bold
   a
     margin-left 4px
-    color $color-purple-dark
     text-transform none
+
+.fdw-view-footer-credits
+  a
+    color $color-purple-dark
+    font-weight normal

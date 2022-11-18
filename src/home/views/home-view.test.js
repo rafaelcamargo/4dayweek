@@ -1,4 +1,4 @@
-import { waitFor, asyncMount, RouterMock } from '@src/base/services/testing';
+import { waitFor, asyncMount, within, RouterMock } from '@src/base/services/testing';
 import companiesResource from '@src/companies/resources/companies';
 import companiesMock from '@src/companies/mocks/companies';
 import { HomeView } from './home-view';
@@ -23,8 +23,11 @@ describe('Home View', () => {
   });
 
   it('should contain a link to contribute', async () => {
-    const { getByText } = await mount();
-    expect(getByText(/contribute/i)).toHaveAttribute('href', '/contribute');
+    const { container } = await mount();
+    const companyListHeading = container.querySelector('h2');
+    expect(
+      within(companyListHeading).getByText(/contribute/i)
+    ).toHaveAttribute('href', '/contribute');
   });
 
   it('should contain a company list', async () => {

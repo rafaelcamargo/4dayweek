@@ -1,6 +1,7 @@
 import './view.styl';
 import { Header } from '@src/base/components/header/header';
 import { Link } from '@src/base/components/link/link';
+import { Menu } from '@src/base/components/menu/menu';
 import { Meta } from '@src/base/components/meta/meta';
 
 export const View = ({ children, heading, description, keywords }) => {
@@ -12,10 +13,13 @@ export const View = ({ children, heading, description, keywords }) => {
           {children}
         </article>
         <footer className="fdw-view-footer">
-          Created and curated by
-          <Link href="https://rafaelcamargo.com/" external>
-            Rafael Camargo
-          </Link>
+          <Menu />
+          <div className="fdw-view-footer-credits">
+            Created and curated by
+            <Link href="https://rafaelcamargo.com/" external>
+              Rafael Camargo
+            </Link>
+          </div>
         </footer>
       </main>
     </Meta>
