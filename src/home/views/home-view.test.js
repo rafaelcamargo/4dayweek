@@ -1,26 +1,30 @@
-import ENV from '@environment';
-import { waitFor, asyncMount } from '@src/base/services/testing';
+import { waitFor, asyncMount, RouterMock } from '@src/base/services/testing';
 import companiesResource from '@src/companies/resources/companies';
 import companiesMock from '@src/companies/mocks/companies';
 import { HomeView } from './home-view';
 
 describe('Home View', () => {
   async function mount(){
-    return await asyncMount(<HomeView />);
+    return await asyncMount(
+      <RouterMock>
+        <HomeView />
+      </RouterMock>
+    );
   }
 
   beforeEach(() => {
     companiesResource.get = jest.fn(() => Promise.resolve({ data: companiesMock }));
   });
 
-  it('should contain a logo', async () => {
-    const { getByAltText } = await mount();
+  it('should contain logo and heading', async () => {
+    const { getByAltText, getByRole } = await mount();
     expect(getByAltText('Four Day Week\'s Logo')).toBeInTheDocument();
+    expect(getByRole('heading', { name: 'Four-Day Week' })).toBeInTheDocument();
   });
 
-  it('should contain a link to add a company', async () => {
+  it('should contain a link to contribute', async () => {
     const { getByText } = await mount();
-    expect(getByText(/add company/i)).toHaveAttribute('href', ENV.ADD_COMPANY_FORM_LINK);
+    expect(getByText(/contribute/i)).toHaveAttribute('href', '/contribute');
   });
 
   it('should contain a company list', async () => {

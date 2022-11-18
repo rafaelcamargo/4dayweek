@@ -1,5 +1,4 @@
 import './home-view.styl';
-import ENV from '@environment';
 import { Link } from '@src/base/components/link/link';
 import { View } from '@src/base/components/view/view';
 import { CompanyList } from '@src/companies/components/company-list/company-list';
@@ -16,8 +15,8 @@ export const HomeView = () => {
         <h2>
           <span>Companies</span>
           <span>
-            <Link href={ENV.ADD_COMPANY_FORM_LINK} external>
-              <span role="presentation">+</span> Add Company
+            <Link to="/contribute">
+              <span role="presentation">+</span> Contribute
             </Link>
           </span>
         </h2>
