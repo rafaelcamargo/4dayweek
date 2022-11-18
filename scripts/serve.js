@@ -55,6 +55,7 @@ function serve(){
     port,
     host,
     root: './dist',
+    file: 'index.html',
     open: false,
     wait: 500,
     usePolling: true,
