@@ -2,13 +2,24 @@ import { render } from '@testing-library/react';
 import { View } from './view';
 
 describe('View', () => {
-  function mount({ content, ...rest }){
+  function mount({ content, ...rest } = {}){
     return render(
       <View {...rest}>
         {content}
       </View>
     );
   }
+
+  it('should render default meta tags', () => {
+    mount();
+    expect(document.querySelector('title').innerHTML).toEqual('Four-Day Week');
+  });
+
+  it('should render custom meta tags', () => {
+    const heading = 'Custom title';
+    mount({ heading });
+    expect(document.querySelector('title').innerHTML).toEqual(heading);
+  });
 
   it('should render a content', () => {
     const content = 'This is some content';
