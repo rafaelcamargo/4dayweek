@@ -10,21 +10,21 @@
       &:after
         content ''
         position absolute
-        top 50%
+        top calc(50% - 6px)
         right 16px
         width 8px
         height 8px
         border-color $color-grey-dark
         border-style solid
-        border-width 0 0 1px 1px
-        transform translateY(-50%) rotate(-45deg)
-        transition transform 500ms, border-color 2s
-        transition-timing-function ease
+        border-width 0 1px 1px 0
+        transform rotate(45deg)
+        transform-origin 5px 5px
+        transition all 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55)
     &[open]
       .fwd-company-list-item-detail-summary
         &:after
           border-color $color-grey
-          transform translateY(-50%) rotate(135deg)
+          transform rotate(-135deg)
 
 .fwd-company-list-item-detail-summary
   list-style none
