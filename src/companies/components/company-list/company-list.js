@@ -21,8 +21,12 @@ export const CompanyList = () => {
                 <div className="fwd-company-list-item-detail-content">
                   <p>{company.description}</p>
                   <footer>
-                    <Link href={company.website} external>Website</Link>
-                    <Link href={company.careers_page} external>Careers</Link>
+                    <Link href={buildFullCompanyLink(company.website)} external>
+                      Website
+                    </Link>
+                    <Link href={buildFullCompanyLink(company.careers_page)} external>
+                      Careers
+                    </Link>
                   </footer>
                 </div>
               </details>
@@ -33,3 +37,7 @@ export const CompanyList = () => {
     </div>
   );
 };
+
+function buildFullCompanyLink(url){
+  return `${url}?utm_source=4dayweek.rafaelcamargo.com`;
+}
