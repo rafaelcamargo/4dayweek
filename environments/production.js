@@ -1,4 +1,5 @@
 module.exports = {
+  TYPE: 'production',
   ADD_COMPANY_FORM_LINK: 'https://forms.gle/vWyra4VryNHTf5M66',
   ANALYTICS: {
     PLAUSIBLE: {
