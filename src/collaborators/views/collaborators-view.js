@@ -40,7 +40,7 @@ export const CollaboratorsView = () => {
 
 function getCollaborators(){
   return [
-    { name: 'André Pereira' },
+    { name: 'Andre Pereira' },
     { name: 'Lucas Cunha', link: 'https://thegamingpub.com/' }
   ];
 }

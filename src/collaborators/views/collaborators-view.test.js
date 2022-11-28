@@ -19,7 +19,7 @@ describe('Collaborators View', () => {
   it('should contain a collaborators list', () => {
     const { getByText } = mount();
     const secondCollaboratorItem = getByText(/lucas cunha/i).parentElement;
-    expect(getByText(/andré pereira/i)).toBeInTheDocument();
+    expect(getByText(/andre pereira/i)).toBeInTheDocument();
     expect(
       within(secondCollaboratorItem).getByText(/learn more →/i)
     ).toHaveAttribute('href', 'https://thegamingpub.com/');
