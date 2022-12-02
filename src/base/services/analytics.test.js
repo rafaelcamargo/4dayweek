@@ -21,14 +21,9 @@ describe('Analytics Service', () => {
     );
   });
 
-  it('should track page view on initialize', () => {
-    analyticsService.init();
-    expect(ganalyticsInstanceMock.trackPageview).toHaveBeenCalledTimes(1);
-  });
-
   it('should track page view', () => {
     analyticsService.init();
     analyticsService.trackPageView();
-    expect(ganalyticsInstanceMock.trackPageview).toHaveBeenCalledTimes(2);
+    expect(ganalyticsInstanceMock.trackPageview).toHaveBeenCalledTimes(1);
   });
 });
