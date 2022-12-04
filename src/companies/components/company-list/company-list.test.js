@@ -21,6 +21,23 @@ describe('Company List', () => {
     });
   });
 
+  it('should show company adoption', async () => {
+    const { getByText } = mount();
+    const [company] = companiesMock;
+    await waitFor(() => {
+      expect(getByText(company.adoption)).toBeInTheDocument();
+    });
+  });
+
+  it('should show company origin', async () => {
+    const { getByText } = mount();
+    const [company] = companiesMock;
+    const [companyCity] = company.origin.split(',');
+    await waitFor(() => {
+      expect(getByText(companyCity)).toBeInTheDocument();
+    });
+  });
+
   it('should contain links to the company\'s home and careers pages', async () => {
     const { getAllByText } = mount();
     const [company] = companiesMock;

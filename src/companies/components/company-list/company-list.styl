@@ -27,12 +27,28 @@
           transform rotate(-135deg)
 
 .fwd-company-list-item-detail-summary
+  display flex
+  justify-content space-between
+  align-items center
+  padding 20px 45px 20px 5px
   list-style none
   &::marker,
   &::-webkit-details-marker
     display none
-  h3
-    padding 20px 45px 20px 5px
+  .fdw-company-origin
+    margin-top 5px
+    font-size $font-size-xxs
+    opacity .5
+
+.fwd-company-list-item-detail-adoption
+  padding-right 10px
+  color $color-lightest
+
+.fwd-company-list-item-detail-adoption-label
+  color $color-grey-dark
+  font-weight bold
+  font-size $font-size-xxxs
+  text-transform uppercase
 
 .fwd-company-list-item-detail-content
   padding 5px 5px 20px
@@ -47,3 +63,6 @@
     transition background-color 300ms ease-out
     &:hover
       background-color alpha($color-grey-darker, .25)
+
+  .fwd-company-list-item-detail-adoption
+    padding-right 50px

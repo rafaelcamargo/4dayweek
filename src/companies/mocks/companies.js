@@ -1,7 +1,7 @@
 export default [
   {
     name: 'Compilorama',
-    origin: 'Somewhere, Earth',
+    origin: 'Joinville, Brazil',
     website: 'https://cmplrm.com',
     adoption: 'Full',
     careers_page: 'https://cmplrm.com/careers',

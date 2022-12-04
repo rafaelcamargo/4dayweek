@@ -2,6 +2,7 @@ import './company-list.styl';
 import { useState } from 'react';
 import { Fetcher } from '@glorious/taslonic/react';
 import { Link } from '@src/base/components/link/link';
+import { CompanyOrigin } from '@src/companies/components/company-origin/company-origin';
 import companiesResource from '@src/companies/resources/companies';
 
 export const CompanyList = () => {
@@ -16,7 +17,16 @@ export const CompanyList = () => {
             <li key={index}>
               <details>
                 <summary className="fwd-company-list-item-detail-summary">
-                  <h3>{company.name}</h3>
+                  <h3>
+                    {company.name}
+                    <CompanyOrigin origin={company.origin} />
+                  </h3>
+                  <span className="fwd-company-list-item-detail-adoption">
+                    <div className="fwd-company-list-item-detail-adoption-label">
+                      Adoption
+                    </div>
+                    {company.adoption}
+                  </span>
                 </summary>
                 <div className="fwd-company-list-item-detail-content">
                   <p>{company.description}</p>
