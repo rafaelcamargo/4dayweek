@@ -1,5 +1,4 @@
 import './collaborators-view.styl';
-import { Col, Row } from '@glorious/taslonic/react';
 import { Link } from '@src/base/components/link/link';
 import { View } from '@src/base/components/view/view';
 
@@ -12,27 +11,19 @@ export const CollaboratorsView = () => {
         description={description}
         keywords="four-day week, collaborators"
       >
-        <Row>
-          <Col>
-            <p>
-              {description}
-            </p>
-          </Col>
-        </Row>
-        <Row offsetXs="4">
-          <Col>
-            <ul className="fdw-collaborators-view-list">
-              {
-                getCollaborators().map(({ name, link }, index) => (
-                  <li key={index}>
-                    <span>{name}</span>
-                    {handleCollboratorLink(link)}
-                  </li>
-                ))
-              }
-            </ul>
-          </Col>
-        </Row>
+        <p>
+          {description}
+        </p>
+        <ul className="fdw-collaborators-view-list">
+          {
+            getCollaborators().map(({ name, link }, index) => (
+              <li key={index}>
+                <span>{name}</span>
+                {handleCollboratorLink(link)}
+              </li>
+            ))
+          }
+        </ul>
       </View>
     </div>
   );
