@@ -1,9 +1,10 @@
 export const formatOrigin = rawOrigin => {
   if(!rawOrigin) return {};
   const [city, country] = rawOrigin.split(',');
+  const countryCode = getCountryISO3166Alpha2Code(country);
   return {
     countryCode: getCountryISO3166Alpha2Code(country),
-    city
+    city: countryCode && city
   };
 };
 

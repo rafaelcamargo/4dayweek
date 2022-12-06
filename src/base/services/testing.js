@@ -3,8 +3,8 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 export * from '@testing-library/react';
 export { default as userEvent } from '@testing-library/user-event';
 
-export async function pause(){
-  await new Promise(resolve => setTimeout(resolve));
+export async function pause(timeout = 0){
+  await new Promise(resolve => setTimeout(resolve, timeout));
 }
 
 export async function asyncMount(component){

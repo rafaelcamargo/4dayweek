@@ -1,14 +1,36 @@
 @import '@src/vars'
 
 .fdw-home-view
+  position relative
   h2
+    position sticky
+    top 0
+    left 0
     display flex
     align-items center
     justify-content space-between
-    margin-top 60px
+    margin-top 30px
+    padding 30px 0 15px
+    background-color $color-darkest
     color $color-grey-dark
     font-size $font-size-xs
     font-weight 600
     text-transform uppercase
+    box-shadow 0 12px 18px 3px $color-darkest
+    z-index $layer-lowest
   .fwd-company-list-wrapper
     margin-top 20px
+
+.fdw-home-view-company-sort-select
+  margin-left 5px
+  padding 0
+  background-color transparent
+  color $color-grey
+  font-weight bold
+  text-align center
+  text-transform uppercase
+  border-width 0 0 1px 0
+  border-style dotted
+  border-color $color-grey
+  cursor pointer
+  -webkit-appearance none

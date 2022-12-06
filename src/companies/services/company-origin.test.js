@@ -12,4 +12,12 @@ describe('Company Origin Service', () => {
       countryCode: 'br'
     });
   });
+
+  it('should return an objet containing blank city and country code if origin is unknown', () => {
+    const origin = 'Nowhere, Unknown';
+    expect(formatOrigin(origin)).toEqual({
+      city: '',
+      countryCode: ''
+    });
+  });
 });
