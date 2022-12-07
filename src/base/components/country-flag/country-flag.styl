@@ -1,0 +1,15 @@
+$country-codes = au at br ca dk fr de ie nl ch gb us
+
+.fdw-country-flag
+  position relative
+  display inline-block
+  width 1.33333333em
+  background-size contain
+  background-position 50%
+  background-repeat no-repeat
+  line-height 1em
+  text-indent -9999px
+
+for $code, i in $country-codes
+  .fdw-country-flag-{$code}
+    background-image url('flag-icons/flags/4x3/' + $code + '.svg')
