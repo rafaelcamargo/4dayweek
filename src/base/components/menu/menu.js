@@ -4,7 +4,7 @@ import { Link } from '@src/base/components/link/link';
 
 export const Menu = () => {
   return (
-    <nav className="fwd-menu">
+    <nav className="fdw-menu">
       <ul>
         {routes.map(({ name, path }) => (
           <li key={name}>

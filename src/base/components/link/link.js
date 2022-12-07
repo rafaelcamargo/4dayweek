@@ -15,7 +15,7 @@ function Anchor({ children, ...rest }){
 }
 
 function buildProps({ to, external, ...rest }){
-  const baseProps = { className: 'fwd-link', ...rest };
+  const baseProps = { className: 'fdw-link', ...rest };
   return to ? { ...baseProps, to } : { ...baseProps, ...buildRelAttr(external) };
 }
 

@@ -12,24 +12,24 @@ export const CompanyList = ({ sortBy }) => {
   useEffect(() => fetchCompanies());
 
   return (
-    <div className="fwd-company-list-wrapper">
-      <ul className="fwd-company-list">
+    <div className="fdw-company-list-wrapper">
+      <ul className="fdw-company-list">
         {sortCompaniesBy(companies, sortBy).map((company, index) => (
           <li key={index}>
             <details>
-              <summary className="fwd-company-list-item-detail-summary">
+              <summary className="fdw-company-list-item-detail-summary">
                 <h3>
                   {company.name}
                   <CompanyOrigin origin={company.origin} />
                 </h3>
-                <span className="fwd-company-list-item-detail-adoption">
-                  <div className="fwd-company-list-item-detail-adoption-label">
+                <span className="fdw-company-list-item-detail-adoption">
+                  <div className="fdw-company-list-item-detail-adoption-label">
                     Adoption
                   </div>
                   {company.adoption}
                 </span>
               </summary>
-              <div className="fwd-company-list-item-detail-content">
+              <div className="fdw-company-list-item-detail-content">
                 <p>{company.description}</p>
                 <footer>
                   <Link href={buildFullCompanyLink(company.website)} external>
