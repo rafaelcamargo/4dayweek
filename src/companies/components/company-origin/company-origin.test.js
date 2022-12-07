@@ -16,6 +16,6 @@ describe('Company Origin', () => {
     const { getByText } = mount({ origin });
     const element = getByText(origin.split(',')[0]);
     expect(element).toBeInTheDocument();
-    expect(element.querySelector('span')).toHaveClass('fi fi-br');
+    expect(element.querySelector('span')).toHaveClass('fdw-country-flag fdw-country-flag-br');
   });
 });
