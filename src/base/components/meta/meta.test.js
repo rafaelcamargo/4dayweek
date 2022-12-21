@@ -13,7 +13,7 @@ describe('Meta', () => {
   it('should build default meta tags', () => {
     mount();
     const title = 'Four-Day Week';
-    const description = 'This website gets togheter all the companies that already work four days a week or that sympathize with shorter work weeks.';
+    const description = 'This website gets together all the companies that already work four days a week or that sympathize with shorter work weeks.';
     const keywords = 'four-day week, rafael camargo, comapanies';
     expect(queryElement('title').textContent).toEqual(title);
     expect(queryMetaContent('twitter:title')).toEqual(title);

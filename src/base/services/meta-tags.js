@@ -56,7 +56,7 @@ function buildMetaTag({ attrName, attrValue, content }){
 function getDefaultMetaData(){
   return {
     title: 'Four-Day Week',
-    description: 'This website gets togheter all the companies that already work four days a week or that sympathize with shorter work weeks.',
+    description: 'This website gets together all the companies that already work four days a week or that sympathize with shorter work weeks.',
     keywords: 'four-day week, rafael camargo, comapanies'
   };
 }

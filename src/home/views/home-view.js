@@ -17,7 +17,7 @@ export const HomeView = () => {
     <div className="fdw-home-view">
       <View heading="Four-Day Week">
         <p>
-          The idea behind this website is getting togheter all the companies
+          The idea behind this website is getting together all the companies
           that already work four days a week or that sympathize with shorter
           work weeks.
         </p>
