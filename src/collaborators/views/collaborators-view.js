@@ -32,6 +32,7 @@ export const CollaboratorsView = () => {
 function getCollaborators(){
   return [
     { name: 'Andre Pereira' },
+    { name: 'Chaman Sharma', link: 'https://www.linkedin.com/in/ux4web' },
     { name: 'Lucas Cunha', link: 'https://thegamingpub.com/' },
     { name: 'Sabrina Freifeld', link: 'https://www.linkedin.com/in/sabrinafreifeld/' }
   ];
