@@ -32,7 +32,8 @@ export const CollaboratorsView = () => {
 function getCollaborators(){
   return [
     { name: 'Andre Pereira' },
-    { name: 'Lucas Cunha', link: 'https://thegamingpub.com/' }
+    { name: 'Lucas Cunha', link: 'https://thegamingpub.com/' },
+    { name: 'Sabrina Freifeld', link: 'https://www.linkedin.com/in/sabrinafreifeld/' }
   ];
 }
 
