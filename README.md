@@ -54,7 +54,7 @@ npm run start
 
 ## Tests
 
-1. In case you changed any website behavior, ensure that all the code you changed is covered with automated tests:
+1. In case you have changed any website behavior, ensure that all changes are covered with automated tests:
 ``` bash
 npm run test
 ```
