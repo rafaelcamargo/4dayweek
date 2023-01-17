@@ -16,7 +16,7 @@ export const View = ({ children, heading, description, keywords }) => {
           <Menu />
           <div className="fdw-view-footer-credits">
             Created and curated by
-            <Link href="https://rafaelcamargo.com/" external>
+            <Link href="https://rafaelcamargo.com/?utm_source=4dayweek" external>
               Rafael Camargo
             </Link>
           </div>
