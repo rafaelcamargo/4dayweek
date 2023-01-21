@@ -204,6 +204,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# VSCode
+.idea
+
 # Distribution files
 dist
 

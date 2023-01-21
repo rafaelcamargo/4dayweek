@@ -32,7 +32,11 @@ describe('Company List', () => {
   it('should contain links to the company\'s home and careers pages', async () => {
     const { getAllByText } = await mount();
     const [company] = companiesMock;
-    expect(getAllByText(/website/i)[0]).toHaveAttribute('href', `${company.website}?utm_source=4dayweek.rafaelcamargo.com`);
-    expect(getAllByText(/careers/i)[0]).toHaveAttribute('href', `${company.careers_page}?utm_source=4dayweek.rafaelcamargo.com`);
+    expect(getAllByText(/website/i)[0]).toHaveAttribute(
+      'href', `${company.website}?utm_source=4dayweek.rafaelcamargo.com`
+    );
+    expect(getAllByText(/careers/i)[0]).toHaveAttribute(
+      'href', `${company.careers_page}?utm_source=4dayweek.rafaelcamargo.com`
+    );
   });
 });
