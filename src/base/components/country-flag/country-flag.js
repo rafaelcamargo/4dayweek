@@ -27,6 +27,7 @@ function getCountryISO3166Alpha2Code(countryName = ''){
     'germany': 'de',
     'india': 'in',
     'ireland': 'ie',
+    'malaysia': 'my',
     'netherlands': 'nl',
     'new zealand': 'nz',
     'switzerland': 'ch',
