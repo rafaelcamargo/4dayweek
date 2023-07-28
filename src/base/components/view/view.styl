@@ -1,4 +1,5 @@
 @import '@src/vars'
+@import '@src/mixins'
 
 $footer-height = 100px
 
@@ -12,10 +13,6 @@ $footer-height = 100px
   box-sizing border-box
 
 .fdw-view-footer
-  display flex
-  align-items center
-  justify-content center
-  flex-direction column
   position absolute
   bottom 0
   left 0
@@ -24,10 +21,17 @@ $footer-height = 100px
   color $color-grey-dark
   font-size $font-size-xxs
   a
-    margin-left 4px
     text-transform none
 
 .fdw-view-footer-credits
   a
     color $color-grey-dark
     font-weight normal
+    text-decoration underline
+
++breakpoint('sm')
+  .fdw-view-footer
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
