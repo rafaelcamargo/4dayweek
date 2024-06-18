@@ -8,7 +8,6 @@ import { mount } from '.';
 describe('Index', () => {
   beforeEach(() => {
     analyticsService.init = jest.fn();
-    analyticsService.trackPageView = jest.fn();
     companiesResource.get = jest.fn(() => Promise.resolve({ data: companiesMock }));
     document.body.innerHTML = '<div data-app></div>';
   });
@@ -42,9 +41,6 @@ describe('Index', () => {
     user.click(screen.getByRole('link', { name: 'feedback' }));
     await waitFor(() => {
       expect(screen.getByRole('heading', { name: 'Feedback' })).toBeInTheDocument();
-    });
-    await waitFor(() => {
-      expect(analyticsService.trackPageView).toHaveBeenCalledTimes(2);
     });
   });
 });

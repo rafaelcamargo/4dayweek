@@ -18,10 +18,7 @@ export const View = ({ children, heading, description, keywords }) => {
             Created and curated 
             by <Link href="https://rafaelcamargo.com/?utm_source=4dayweek" external>
               Rafael Camargo
-            </Link>. This website doesn’t use cookies, 
-            and its <Link href="https://plausible.io/4dayweek.rafaelcamargo.com?period=30d" external>
-              analytics
-            </Link> are public.
+            </Link>.
           </div>
         </footer>
       </main>
